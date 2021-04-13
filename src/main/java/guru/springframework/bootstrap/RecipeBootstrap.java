@@ -102,16 +102,15 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
         guacNotes.setRecipeNotes("Be careful handling chiles if using. \n" +
                 "Wash your hands thoroughly after handling and do not touch \n"+
                 "your eyes or the area near your eyes with your hands for several hours");
-        guacNotes.setRecipe(guacRecipe);
         guacRecipe.setNotes(guacNotes);
-        guacRecipe.getIngredients().add(new Ingredient("ripe avocados",new BigDecimal(2),guacRecipe,eachUom));
-        guacRecipe.getIngredients().add(new Ingredient("Kosher salt",new BigDecimal("0.5"),guacRecipe,teeUom));
-        guacRecipe.getIngredients().add(new Ingredient("fresh lime juice or lemon juice",new BigDecimal(2),guacRecipe,tableUom));
-        guacRecipe.getIngredients().add(new Ingredient("minced red onion",new BigDecimal(2),guacRecipe,tableUom));
-        guacRecipe.getIngredients().add(new Ingredient("serrano chiles",new BigDecimal(2),guacRecipe,eachUom));
-        guacRecipe.getIngredients().add(new Ingredient("Cilantro",new BigDecimal(2),guacRecipe,dashUom));
-        guacRecipe.getIngredients().add(new Ingredient("fresgly grated black pepper",new BigDecimal(2),guacRecipe,dashUom));
-        guacRecipe.getIngredients().add(new Ingredient("ripe tomato,seeds and pulp removed",new BigDecimal("0.5"),guacRecipe,eachUom));
+        guacRecipe.getIngredients().add(new Ingredient("ripe avocados",new BigDecimal(2),eachUom));
+        guacRecipe.getIngredients().add(new Ingredient("Kosher salt",new BigDecimal("0.5"),teeUom));
+        guacRecipe.getIngredients().add(new Ingredient("fresh lime juice or lemon juice",new BigDecimal(2),tableUom));
+        guacRecipe.getIngredients().add(new Ingredient("minced red onion",new BigDecimal(2),tableUom));
+        guacRecipe.getIngredients().add(new Ingredient("serrano chiles",new BigDecimal(2),eachUom));
+        guacRecipe.getIngredients().add(new Ingredient("Cilantro",new BigDecimal(2),dashUom));
+        guacRecipe.getIngredients().add(new Ingredient("fresgly grated black pepper",new BigDecimal(2),dashUom));
+        guacRecipe.getIngredients().add(new Ingredient("ripe tomato,seeds and pulp removed",new BigDecimal("0.5"),eachUom));
         guacRecipe.getCategories().add(americanCategory);
         guacRecipe.getCategories().add(mexicanCategory);
         recipes.add(guacRecipe);
@@ -132,7 +131,6 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
           "Grill the chicken, then let it rest while you warm the tortillas. \n" +
                 "Now you are ready to assemble the tacos and dig in. The whole meal comes together in about 30 minutes!");
         Notes tacosNotes = new Notes();
-        tacosNotes.setRecipe(tacosRecipe);
         tacosNotes.setRecipeNotes("The ancho chiles I use in the marinade are named for their wide shape. \n" +
                 "They are large, have a deep reddish brown color when dried, and are mild in flavor with just \n" +
                 "a hint of heat. You can find ancho chile powder at any markets that sell Mexican ingredients, or online.\n" +
@@ -144,13 +142,13 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
                 "You could also easily double or even triple this recipe for a larger party.\n" +
                 "A taco and a cold beer on a warm day? Now that's living!");
         tacosRecipe.setNotes(tacosNotes);
-        tacosRecipe.getIngredients().add( new Ingredient("Ancho Chili Powder",new BigDecimal(2),tacosRecipe,tableUom));
-        tacosRecipe.getIngredients().add( new Ingredient("Dried Oregano",new BigDecimal(1),tacosRecipe,teeUom));
-        tacosRecipe.getIngredients().add( new Ingredient("Dried Cumin",new BigDecimal(1),tacosRecipe,teeUom));
-        tacosRecipe.getIngredients().add( new Ingredient("Sugar",new BigDecimal(1),tacosRecipe,teeUom));
-        tacosRecipe.getIngredients().add( new Ingredient("Salt",new BigDecimal("0.5"),tacosRecipe,teeUom));
-        tacosRecipe.getIngredients().add( new Ingredient("Clove of Garlic",new BigDecimal(1),tacosRecipe,eachUom));
-        tacosRecipe.getIngredients().add( new Ingredient("finaly graed oranfe thigs",new BigDecimal(1),tacosRecipe,tableUom));
+        tacosRecipe.getIngredients().add( new Ingredient("Ancho Chili Powder",new BigDecimal(2),tableUom));
+        tacosRecipe.getIngredients().add( new Ingredient("Dried Oregano",new BigDecimal(1),teeUom));
+        tacosRecipe.getIngredients().add( new Ingredient("Dried Cumin",new BigDecimal(1),teeUom));
+        tacosRecipe.getIngredients().add( new Ingredient("Sugar",new BigDecimal(1),teeUom));
+        tacosRecipe.getIngredients().add( new Ingredient("Salt",new BigDecimal("0.5"),teeUom));
+        tacosRecipe.getIngredients().add( new Ingredient("Clove of Garlic",new BigDecimal(1),eachUom));
+        tacosRecipe.getIngredients().add( new Ingredient("finaly graed oranfe thigs",new BigDecimal(1),tableUom));
         tacosRecipe.getCategories().add(americanCategory);
         tacosRecipe.getCategories().add(mexicanCategory);
         recipes.add(tacosRecipe);
