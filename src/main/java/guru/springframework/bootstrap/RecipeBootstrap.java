@@ -32,7 +32,7 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
     @Transactional
     public void onApplicationEvent(ContextRefreshedEvent contextRefreshedEvent) {
         recipeRepository.saveAll(getRecipes());
-        log.debug("loading Bootstrap data");
+        log.info("loading Bootstrap data");
     }
 
     private List<Recipe> getRecipes() {
