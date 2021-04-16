@@ -9,7 +9,7 @@ steps:
  - checkout
 # Download and cache dependencies
  - restore_cache:
-key: spring5-recipe-app-{‌{ checksum "pom.xml" }}
+key: spring5-recipe-app-{{ checksum "pom.xml" }}
  - run: mvn install -DskipTests
  - run: mvn dependency:go-offline
  - save_cache:
