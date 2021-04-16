@@ -15,7 +15,7 @@ key:   spring5-recipe-app-{{ checksum "pom.xml" }}
    - save_cache:
 paths:
    - ~/.m2
-ey: spring5-recipe-app-{{ checksum "pom.xml" }}
+key: spring5-recipe-app-{{ checksum "pom.xml" }}
 # run tests!
    - run: mvn package
    - store_test_results:
