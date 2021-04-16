@@ -1,5 +1,5 @@
 version: 2
-  jobs:
+jobs:
     build:
       working_directory: ~/spring5-recipe-app
       docker:
