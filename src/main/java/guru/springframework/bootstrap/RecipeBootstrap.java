@@ -108,16 +108,20 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
                 "Wash your hands thoroughly after handling and do not touch \n"+
                 "your eyes or the area near your eyes with your hands for several hours");
         guacRecipe.setNotes(guacNotes);
-        guacRecipe.getIngredients().add(new Ingredient("ripe avocados",new BigDecimal(2),eachUom));
-        guacRecipe.getIngredients().add(new Ingredient("Kosher salt",new BigDecimal("0.5"),teeUom));
-        guacRecipe.getIngredients().add(new Ingredient("fresh lime juice or lemon juice",new BigDecimal(2),tableUom));
-        guacRecipe.getIngredients().add(new Ingredient("minced red onion",new BigDecimal(2),tableUom));
-        guacRecipe.getIngredients().add(new Ingredient("serrano chiles",new BigDecimal(2),eachUom));
-        guacRecipe.getIngredients().add(new Ingredient("Cilantro",new BigDecimal(2),dashUom));
-        guacRecipe.getIngredients().add(new Ingredient("fresgly grated black pepper",new BigDecimal(2),dashUom));
-        guacRecipe.getIngredients().add(new Ingredient("ripe tomato,seeds and pulp removed",new BigDecimal("0.5"),eachUom));
+        guacRecipe.addIngredient(new Ingredient("ripe avocados",new BigDecimal(2),eachUom));
+        guacRecipe.addIngredient(new Ingredient("Kosher salt",new BigDecimal("0.5"),teeUom));
+        guacRecipe.addIngredient(new Ingredient("fresh lime juice or lemon juice",new BigDecimal(2),tableUom));
+        guacRecipe.addIngredient(new Ingredient("minced red onion",new BigDecimal(2),tableUom));
+        guacRecipe.addIngredient(new Ingredient("serrano chiles",new BigDecimal(2),eachUom));
+        guacRecipe.addIngredient(new Ingredient("Cilantro",new BigDecimal(2),dashUom));
+        guacRecipe.addIngredient(new Ingredient("fresgly grated black pepper",new BigDecimal(2),dashUom));
+        guacRecipe.addIngredient(new Ingredient("ripe tomato,seeds and pulp removed",new BigDecimal("0.5"),eachUom));
         guacRecipe.getCategories().add(americanCategory);
         guacRecipe.getCategories().add(mexicanCategory);
+        guacRecipe.setUrl("https://www.simplyrecipes.com/recipes/perfect_guacamole/");
+        guacRecipe.setServings(4);
+        guacRecipe.setSource("Simple Recipes");
+
         recipes.add(guacRecipe);
 
         Recipe tacosRecipe = new Recipe();
@@ -147,15 +151,19 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
                 "You could also easily double or even triple this recipe for a larger party.\n" +
                 "A taco and a cold beer on a warm day? Now that's living!");
         tacosRecipe.setNotes(tacosNotes);
-        tacosRecipe.getIngredients().add( new Ingredient("Ancho Chili Powder",new BigDecimal(2),tableUom));
-        tacosRecipe.getIngredients().add( new Ingredient("Dried Oregano",new BigDecimal(1),teeUom));
-        tacosRecipe.getIngredients().add( new Ingredient("Dried Cumin",new BigDecimal(1),teeUom));
-        tacosRecipe.getIngredients().add( new Ingredient("Sugar",new BigDecimal(1),teeUom));
-        tacosRecipe.getIngredients().add( new Ingredient("Salt",new BigDecimal("0.5"),teeUom));
-        tacosRecipe.getIngredients().add( new Ingredient("Clove of Garlic",new BigDecimal(1),eachUom));
-        tacosRecipe.getIngredients().add( new Ingredient("finaly graed oranfe thigs",new BigDecimal(1),tableUom));
+        tacosRecipe.addIngredient(new Ingredient("Ancho Chili Powder",new BigDecimal(2),tableUom));
+        tacosRecipe.addIngredient( new Ingredient("Dried Oregano",new BigDecimal(1),teeUom));
+        tacosRecipe.addIngredient( new Ingredient("Dried Cumin",new BigDecimal(1),teeUom));
+        tacosRecipe.addIngredient( new Ingredient("Sugar",new BigDecimal(1),teeUom));
+        tacosRecipe.addIngredient( new Ingredient("Salt",new BigDecimal("0.5"),teeUom));
+        tacosRecipe.addIngredient( new Ingredient("Clove of Garlic",new BigDecimal(1),eachUom));
+        tacosRecipe.addIngredient( new Ingredient("finaly graed oranfe thigs",new BigDecimal(1),tableUom));
         tacosRecipe.getCategories().add(americanCategory);
         tacosRecipe.getCategories().add(mexicanCategory);
+
+        guacRecipe.setUrl("https://www.simplyrecipes.com/recipes/slow_cooker_shredded_chicken/");
+        guacRecipe.setServings(5);
+        guacRecipe.setSource("Simple Recipes");
         recipes.add(tacosRecipe);
 
         return recipes;
