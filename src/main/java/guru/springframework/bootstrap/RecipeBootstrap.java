@@ -161,9 +161,9 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
         tacosRecipe.getCategories().add(americanCategory);
         tacosRecipe.getCategories().add(mexicanCategory);
 
-        guacRecipe.setUrl("https://www.simplyrecipes.com/recipes/slow_cooker_shredded_chicken/");
-        guacRecipe.setServings(5);
-        guacRecipe.setSource("Simple Recipes");
+        tacosRecipe.setUrl("https://www.simplyrecipes.com/recipes/slow_cooker_shredded_chicken/");
+        tacosRecipe.setServings(5);
+        tacosRecipe.setSource("Simple Recipes");
         recipes.add(tacosRecipe);
 
         return recipes;
