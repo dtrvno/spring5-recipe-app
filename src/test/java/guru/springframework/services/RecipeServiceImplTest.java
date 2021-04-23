@@ -27,17 +27,12 @@ public class RecipeServiceImplTest {
     @Mock
     RecipeCommandToRecipe recipeCommandToRecipe;
 
-    public RecipeServiceImplTest(RecipeRepository recipeRepository,
-                                 RecipeCommandToRecipe recipeCommandToRecipe,
-                                 RecipeToRecipeCommand recipeToRecipeCommand) {
-        this.recipeRepository = recipeRepository;
-        this.recipeToRecipeCommand = recipeToRecipeCommand;
-        this.recipeCommandToRecipe = recipeCommandToRecipe;
-    }
+
 
     @Before
     public void setUp() throws Exception {
         MockitoAnnotations.initMocks(this);
+        recipeService = new RecipeServiceImpl(recipeRepository, recipeCommandToRecipe, recipeToRecipeCommand);
 
     }
     @Test

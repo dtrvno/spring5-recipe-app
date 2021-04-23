@@ -34,7 +34,7 @@ public class RecipeServiceIT {
     @Autowired
     RecipeCommandToRecipe recipeCommandToRecipe;
 
-    //@Autowired
+    @Autowired
     RecipeToRecipeCommand recipeToRecipeCommand;
 
     @Transactional
